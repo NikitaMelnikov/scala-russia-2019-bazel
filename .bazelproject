@@ -1,0 +1,15 @@
+directories:
+  .
+
+targets:
+  //...
+
+test_sources:
+  */src/test/scala
+  */src/it/scala
+
+additional_languages:
+  scala
+  go
+
+# workspace_type: java

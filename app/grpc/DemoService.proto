@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package demo;
+
+option optimize_for = SPEED;
+option java_multiple_files = true;
+option java_package = "demo";
+
+message GreetingsRequest {
+    required string name = 1;
+}
+
+message GreetingsResponse {
+    required string text = 1;
+}
+
+service GreetingsService {
+    rpc GetGreetings(GreetingsRequest) returns (GreetingsResponse);
+}

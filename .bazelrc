@@ -1,0 +1,19 @@
+test --test_arg=--jvm_flags=-Dfile.encoding=utf-8
+test --test_output=all
+test --test_verbose_timeout_warnings
+test  --verbose_failures
+test --color=yes
+# test --remote_http_cache=http://your-remote-cache/
+
+build --nouse_ijars
+build --nojava_header_compilation
+build --verbose_failures
+build --color=yes
+# build --remote_http_cache=http://your-remote-cache/
+build --incompatible_disable_deprecated_attr_params=false
+build --incompatible_depset_is_not_iterable=false
+build --javabase @bazel_tools//tools/jdk:remote_jdk11
+build --host_javabase @bazel_tools//tools/jdk:remote_jdk11
+
+run --javabase @bazel_tools//tools/jdk:remote_jdk11
+run --host_javabase @bazel_tools//tools/jdk:remote_jdk11
