@@ -10,7 +10,7 @@ object DemoAppStarter extends App with LazyLogging {
 
   val server = NettyServerBuilder
     .forPort(9000)
-    .addService(GreetingsServiceGrpc.bindService(new DemoService(), scala.concurrent.ExecutionContext.Implicits.global))
+    .addService(GreetingsServiceGrpc.bindService(new MyDemoService(), scala.concurrent.ExecutionContext.Implicits.global))
     .build()
     .start()
 
