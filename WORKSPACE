@@ -1,4 +1,4 @@
-rules_scala_version="0b6cff39c30da5585394348883b36ba031584727"
+rules_scala_version="0f89c210ade8f4320017daf718a61de3c1ac4773"
 
 workspace(name = 'scala_russia_2019_bazel')
 

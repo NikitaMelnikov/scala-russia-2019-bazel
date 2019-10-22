@@ -4,6 +4,6 @@ import demo.DemoService.{GreetingsRequest, GreetingsResponse, GreetingsServiceGr
 
 import scala.concurrent.Future
 
-class DemoService extends GreetingsServiceGrpc.GreetingsService {
+class MyDemoService extends GreetingsServiceGrpc.GreetingsService {
   override def getGreetings(request: GreetingsRequest): Future[GreetingsResponse] = Future.successful(GreetingsResponse(s"Hello, ${request.name}"))
 }
